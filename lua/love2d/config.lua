@@ -36,16 +36,9 @@ local function setup_lsp(love_library_path, luasocket_library_path)
     end
 
     vim.lsp.config('lua_ls', {
-        settings = {
-            Lua = {
-                workspace = {
-                    libraries = {
-                        love_library_path
-                    }
-                }
-            }
-        }
+        settings = settings,
     })
+    
 end
 
 ---Create auto commands for love2d:
